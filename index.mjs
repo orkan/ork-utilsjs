@@ -1,6 +1,6 @@
 /*
  * This file is part of the @orkans/utilsjs package.
- * Copyright (c) 2023-@Year@ Orkan <orkans+utilsjs@gmail.com>
+ * Copyright (c) 2023-2023 Orkan <orkans+utilsjs@gmail.com>
  */
 
 /**
