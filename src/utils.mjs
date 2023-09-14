@@ -21,6 +21,14 @@ export function arrRand(min, max) {
 }
 
 /**
+ * Repeat array multiple times.
+ * @link https://stackoverflow.com/questions/54935273/how-to-repeat-an-array-n-times
+ */
+export function arrRepeat(arr, repeats) {
+  return Array(repeats).fill(arr).flat();
+}
+
+/**
  * Shuffle array.
  *
  * Algorithm: Fisher-Yates (aka Knuth) Shuffle
@@ -61,7 +69,11 @@ export function objNested(base, names, value = null) {
  * Create object with selected props only.
  */
 export function objReduce(obj, keys) {
-  let out = {};
-  keys.forEach((key) => obj[key] && (out[key] = obj[key]));
+  const out = {};
+  keys.forEach((key) => {
+    if (obj.hasOwnProperty(key)) {
+      out[key] = obj[key];
+    }
+  });
   return out;
 }

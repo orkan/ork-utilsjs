@@ -1,4 +1,4 @@
-# @orkans/utilsjs `v1.0.2`
+# @orkans/utilsjs `v1.1.0`
 Bunch of scripts collected from all around the JS world.
 
 ## Installation
@@ -15,4 +15,4 @@ Node  ^18
 MIT
 
 ### Updated
-Wed, 13 Sep 2023 10:48:38 +02:00
+Thu, 14 Sep 2023 12:42:07 +02:00
