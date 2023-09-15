@@ -27,7 +27,7 @@ export function arrRepeat(arr, repeats) {
  */
 export function arrShuffle(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(rand(0, i + 1));
+    const j = Math.floor(rand(0, i));
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
   return arr;
@@ -76,4 +76,21 @@ export function rand(min = 0, max = 1) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
+}
+
+/**
+ * Run tests over data set.
+ *
+ * @param title Test description
+ * @param obj Data set
+ * @param func Tests callback with each data item as arg
+ */
+export function jestDataSet(title, obj, func) {
+  describe(title, () => {
+    for (const k in obj) {
+      test(`With data set: ${k}`, () => {
+        func(obj[k]);
+      });
+    }
+  });
 }
