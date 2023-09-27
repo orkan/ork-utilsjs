@@ -79,6 +79,30 @@ export function rand(min = 0, max = 1) {
 }
 
 /**
+ * Sleep X seconds.
+ */
+export async function sleep(sec) {
+  await usleep(sec * 1000);
+}
+
+/**
+ * Sleep X miliseconds.
+ */
+export async function usleep(ms) {
+  await new Promise((resolve) =>
+    setTimeout(() => {
+      resolve(1);
+    }, ms)
+  );
+}
+
+/*
+ * ============================================================================
+ * TESTS
+ * ============================================================================
+ */
+
+/**
  * Run tests over data set.
  *
  * @param title Test description
