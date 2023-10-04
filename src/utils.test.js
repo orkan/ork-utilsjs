@@ -7,7 +7,7 @@ import * as utils from '@orkans/utilsjs';
 /**
  * arrPadR()
  */
-utils.jestDataSet(
+utils.testDataSet(
   'arrPadR()',
   {
     'arr[2] -> pad[4]': {
@@ -31,14 +31,14 @@ utils.jestDataSet(
 /**
  * arrPadR()
  */
-utils.jestDataSet('jestDataSet()', { a: 'a1', b: 'b1' }, (data) => {
+utils.testDataSet('testDataSet()', { a: 'a1', b: 'b1' }, (data) => {
   expect(data).toEqual(data);
 });
 
 /**
  * arrRepeat()
  */
-utils.jestDataSet(
+utils.testDataSet(
   'arrRepeat()',
   {
     'len 0': {

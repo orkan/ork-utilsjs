@@ -109,7 +109,7 @@ export async function usleep(ms) {
  * @param obj Data set
  * @param func Tests callback with each data item as arg
  */
-export function jestDataSet(title, obj, func) {
+export function testDataSet(title, obj, func) {
   describe(title, () => {
     for (const k in obj) {
       test(`With data set: ${k}`, () => {
